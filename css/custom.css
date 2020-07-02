@@ -1,0 +1,59 @@
+#buscar {
+    position: relative;
+    
+}
+@media (max-width: 768px) {
+    #buscar,
+    #buscar input {
+        width: 100%;
+    }
+}
+
+#resultado {
+    position: absolute;
+    left:0;
+    top:100%;
+    z-index: 100;
+    width:100%;
+}
+
+.leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive {
+    margin:100px;
+    display: block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    /* background: #cca92c; */
+    cursor: pointer;
+    animation: pulse 2s linear infinite;
+  }
+  .pulse:hover {
+    animation: none;
+  } 
+
+  .leaflet-popup-content-wrapper p {
+      margin: 0;
+  }
+
+ @keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 64, 0.7), 0 0 0 0 rgba(255, 0, 64, 0.7);
+    }
+
+    40% {
+        box-shadow: 0 0 0 18px rgba(255, 0, 64, 0), 0 0 0 5px rgba(255, 0, 64, 0.7);
+    }
+
+    80% {
+        box-shadow: 0 0 0 18px rgba(255, 0, 64, 0), 0 0 0 0 rgba(255, 0, 64, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 64, 0), 0 0 0 0px rgba(255, 0, 64, 0);
+    }
+} 
+
+/* referencia para: "pulse animation with boxshadow" */
+/* https://www.codesnail.com/2019/07/css-pulse-animation.html */
+
+/* https://codepen.io/igorsheg/pen/MBpwGw */
